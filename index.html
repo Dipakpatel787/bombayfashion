@@ -1,0 +1,897 @@
+
+<!DOCTYPE html>
+<html lang="gu" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>બોમ્બે ફેશન (Bombay Fashion) | હિંમતનગરની નંબર 1 મેન્સ વેર શોપ</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Noto Sans Gujarati & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        maroon: {
+                            50: '#fdf2f3',
+                            100: '#fbe5e7',
+                            500: '#8a222e',
+                            700: '#5c161e', // Exact Shop Signboard Maroon
+                            800: '#460f16',
+                            900: '#31090e',
+                        },
+                        gold: {
+                            200: '#faecc8',
+                            300: '#f3d299', // Exact Shop Signboard Cream-Gold
+                            400: '#eab354',
+                            500: '#d4942a',
+                            600: '#b37418',
+                        }
+                    },
+                    fontFamily: {
+                        gujarati: ['"Noto Sans Gujarati"', 'Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Noto Sans Gujarati', 'Poppins', sans-serif;
+            background-color: #fffaf5;
+        }
+
+        /* Signboard Text Effect */
+        .signboard-text {
+            color: #f3d299;
+            text-shadow: 0px 3px 0px #b37418, 0px 6px 12px rgba(0,0,0,0.6);
+        }
+
+        /* Marigold Toran Pattern Effect */
+        .toran-border {
+            background: repeating-linear-gradient(
+                90deg,
+                #f97316 0px,
+                #f97316 20px,
+                #eab308 20px,
+                #eab308 40px,
+                #15803d 40px,
+                #15803d 48px
+            );
+            height: 8px;
+        }
+
+        /* Floating Animation */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: floatSlow 3.5s ease-in-out infinite;
+        }
+
+        /* Sparkle / Glow Effect */
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 15px rgba(234, 179, 84, 0.4); }
+            50% { box-shadow: 0 0 30px rgba(234, 179, 84, 0.85); }
+        }
+        .glow-gold {
+            animation: pulseGlow 2.5s infinite;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #31090e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #eab354;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="text-stone-800 antialiased selection:bg-maroon-700 selection:text-gold-300 overflow-x-hidden">
+
+    <!-- Top Festive Diwali Announcement Bar -->
+    <div class="bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 text-maroon-900 font-bold py-2 px-4 text-center text-sm md:text-base relative z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+            <span class="animate-bounce">🪔</span>
+            <span><strong>ધમાકેદાર દિવાળી ઓફર:</strong> બોમ્બેના નવા ઇમ્પોર્ટેડ સ્ટોક પર ખાસ ફેસ્ટિવ ડિસ્કાઉન્ટ શરૂ! આજે જ પધારો!</span>
+            <span class="animate-bounce">✨</span>
+        </div>
+    </div>
+
+    <!-- Decorative Marigold Toran Strip (Inspired by Shop Photo) -->
+    <div class="toran-border w-full"></div>
+
+    <!-- Navigation Header -->
+    <header class="bg-maroon-800 text-gold-300 sticky top-0 z-40 shadow-xl border-b-2 border-gold-500/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo inspired by exact shop board -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-300 to-gold-600 flex items-center justify-center text-maroon-900 font-black text-2xl shadow-lg group-hover:scale-105 transition">
+                        BF
+                    </div>
+                    <div>
+                        <h1 class="text-2xl sm:text-3xl font-black tracking-wide signboard-text leading-none">
+                            બોમ્બે ફેશન
+                        </h1>
+                        <p class="text-xs text-gold-200 tracking-widest uppercase mt-1 font-semibold">
+                            Bombay Fashion • Himatnagar
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-7 font-semibold text-gold-200">
+                    <a href="#home" class="hover:text-white transition">હોમ</a>
+                    <a href="#speciality" class="hover:text-white transition">અમારી ખાસિયત</a>
+                    <a href="#collection" class="hover:text-white transition">નવું કલેક્શન</a>
+                    <a href="#diwali-offer" class="hover:text-white transition flex items-center gap-1 text-yellow-300">
+                        <i class="fa-solid fa-fire-flame-curved"></i> દિવાળી ઓફર
+                    </a>
+                    <a href="#contact" class="hover:text-white transition">સરનામું અને સંપર્ક</a>
+                </nav>
+
+                <!-- Quick Action Buttons -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="tel:+917016619358" class="bg-maroon-700 hover:bg-maroon-900 text-gold-300 border border-gold-400/50 px-4 py-2.5 rounded-xl font-bold text-sm flex items-center gap-2 transition">
+                        <i class="fa-solid fa-phone-volume animate-pulse"></i>
+                        <span>70166 19358</span>
+                    </a>
+                    <a href="https://wa.me/917016619358?text=%E0%AA%A8%E0%AA%AE%E0%AA%B8%E0%8D%E0%AA%A4%E0%87%20%E0%AA%AC%E0%8B%E0%AA%AE%E0%8D%E0%AA%AC%E0%87%20%E0%AA%AB%E0%87%E0%AA%B6%E0%AA%A8!%20%E0%AA%AE%E0%AA%BE%E0%AA%B0%E0%87%20%E0%AA%A6%E0%AA%BF%E0%AA%B5%E0%AA%BE%E0%AA%B3%E0%80%E0%AA%A8%E0%AA%BE%20%E0%AA%A8%E0%AA%B5%E0%AA%BE%20%E0%AA%95%E0%AA%AA%E0%AA%A1%E0%AA%BE%E0%AA%82%E0%AA%A8%E0%80%20%E0%AA%B5%E0%87%E0%AA%B0%E0%AA%BE%E0%AA%AF%E0%AA%9F%E0%80%20%E0%AA%85%E0%AA%A8%E0%87%20%E0%AA%93%E0%AA%AB%E0%AA%B0%20%E0%AA%B5%E0%AA%BF%E0%AA%B6%E0%87%20%E0%AA%AE%E0%AA%BE%E0%AA%B9%E0%AA%BF%E0%AA%A4%E0%80%20%E0%AA%9C%E0%8B%E0%AA%88%E0%AA%8F%20%E0%AA%9B%E0%87." target="_blank" class="bg-green-600 hover:bg-green-500 text-white px-4 py-2.5 rounded-xl font-bold text-sm flex items-center gap-2 shadow-lg transition transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>WhatsApp કરો</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gold-300 hover:text-white p-2 rounded-lg focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-maroon-900 border-t border-gold-500/30 px-4 pt-3 pb-6 space-y-3">
+            <a href="#home" class="block py-2 px-3 rounded-lg text-gold-200 hover:bg-maroon-700 font-semibold">🏠 હોમ</a>
+            <a href="#speciality" class="block py-2 px-3 rounded-lg text-gold-200 hover:bg-maroon-700 font-semibold">✨ અમારી ખાસિયત (બોમ્બે સ્ટોક)</a>
+            <a href="#collection" class="block py-2 px-3 rounded-lg text-gold-200 hover:bg-maroon-700 font-semibold">👔 નવું કલેક્શન</a>
+            <a href="#diwali-offer" class="block py-2 px-3 rounded-lg text-yellow-300 hover:bg-maroon-700 font-bold">🪔 દિવાળી ધમાકા ઓફર</a>
+            <a href="#contact" class="block py-2 px-3 rounded-lg text-gold-200 hover:bg-maroon-700 font-semibold">📍 સરનામું અને સંપર્ક</a>
+            <div class="pt-2 grid grid-cols-2 gap-3">
+                <a href="tel:+917016619358" class="bg-gold-400 text-maroon-900 text-center py-2.5 rounded-xl font-bold flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone"></i> કોલ કરો
+                </a>
+                <a href="https://wa.me/917016619358?text=%E0%AA%A8%E0%AA%AE%E0%AA%B8%E0%8D%E0%AA%A4%E0%87%20%E0%AA%AC%E0%8B%E0%AA%AE%E0%8D%E0%AA%AC%E0%87%20%E0%AA%AB%E0%87%E0%AA%B6%E0%AA%A8!" target="_blank" class="bg-green-600 text-white text-center py-2.5 rounded-xl font-bold flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative bg-gradient-to-b from-maroon-900 via-maroon-700 to-maroon-900 text-white py-14 md:py-24 overflow-hidden">
+        <!-- Decorative Background Pattern -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#eab354 1.5px, transparent 1.5px); background-size: 28px 28px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Column: Slogans & CTA -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-gold-400/20 border border-gold-400 text-gold-300 px-4 py-1.5 rounded-full text-sm font-bold">
+                        <span class="text-yellow-400">★ 4.1 Google Rating</span>
+                        <span>•</span>
+                        <span>હિંમતનગરની સૌથી વિશ્વાસપાત્ર શોપ</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight">
+                        <span class="signboard-text block mb-2">બોમ્બે ફેશન</span>
+                        <span class="text-white text-2xl sm:text-4xl block font-extrabold mt-2">
+                            મુંબઈની અસલી ફેશન હવે હિંમતનગરમાં!
+                        </span>
+                    </h2>
+
+                    <!-- Main Catchy Slogan Box -->
+                    <div class="bg-maroon-900/80 border-l-4 border-gold-400 p-4 sm:p-5 rounded-r-2xl shadow-lg max-w-2xl mx-auto lg:mx-0">
+                        <p class="text-lg sm:text-xl text-gold-200 font-bold leading-relaxed">
+                            "સીધો બોમ્બેથી જ આવતો પ્રીમિયમ અને ઇમ્પોર્ટેડ માલ! એકવાર પહેરશો તો કલર ક્યારેય નહીં જાય અને પહેરવાની પણ જબરદસ્ત મજા આવશે!"
+                        </p>
+                    </div>
+
+                    <p class="text-stone-200 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        અમારે ત્યાં શર્ટ, ટી-શર્ટ, જીન્સ, કોટન ટ્રાઉઝર અને દિવાળી સ્પેશિયલ પાર્ટીવેર કપડાંની એકદમ નવી અને અવનવી વેરાયટી હાજર સ્ટોકમાં મળી રહેશે.
+                    </p>
+
+                    <!-- Hero CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="https://wa.me/917016619358?text=%E0%AA%A8%E0%AA%AE%E0%AA%B8%E0%8D%E0%AA%A4%E0%87%20%E0%AA%AC%E0%8B%E0%AA%AE%E0%8D%E0%AA%AC%E0%87%20%E0%AA%AB%E0%87%E0%AA%B6%E0%AA%A8!%20%E0%AA%AE%E0%AA%BE%E0%AA%B0%E0%87%20%E0%AA%A8%E0%AA%B5%E0%AA%BE%20%E0%AA%95%E0%AA%AA%E0%AA%A1%E0%AA%BE%E0%AA%82%E0%AA%A8%E0%AA%BE%20%E0%AA%AB%E0%8B%E0%AA%9F%E0%AA%BE%20%E0%AA%85%E0%AA%A8%E0%87%20%E0%AA%A6%E0%AA%BF%E0%AA%B5%E0%AA%BE%E0%AA%B3%E0%80%20%E0%AA%93%E0%AA%AB%E0%AA%B0%20%E0%AA%9C%E0%8B%E0%AA%B5%E0%80%20%E0%AA%9B%E0%87." target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-extrabold px-7 py-4 rounded-2xl shadow-xl flex items-center justify-center gap-3 text-lg transition transform hover:scale-105">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>WhatsApp પર કલેક્શન જુઓ</span>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto bg-gold-400 hover:bg-gold-300 text-maroon-900 font-extrabold px-7 py-4 rounded-2xl shadow-xl flex items-center justify-center gap-2 text-lg transition">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>દુકાનની મુલાકાત લો</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Contact Numbers Pill -->
+                    <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm text-gold-200">
+                        <span class="flex items-center gap-1.5 bg-maroon-800/90 px-3.5 py-1.5 rounded-lg border border-gold-500/30">
+                            <i class="fa-solid fa-phone text-gold-400"></i> +91 70166 19358
+                        </span>
+                        <span class="flex items-center gap-1.5 bg-maroon-800/90 px-3.5 py-1.5 rounded-lg border border-gold-500/30">
+                            <i class="fa-solid fa-phone text-gold-400"></i> +91 99981 84860
+                        </span>
+                        <span class="flex items-center gap-1.5 bg-maroon-800/90 px-3.5 py-1.5 rounded-lg border border-gold-500/30">
+                            <i class="fa-solid fa-clock text-gold-400"></i> સવારે 9:30 થી ખુલ્લું
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Authentic Shop Signboard & Showcase Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-maroon-800 border-4 border-gold-400 rounded-3xl p-5 shadow-2xl relative glow-gold animate-float">
+                        <!-- Top Right Phone Tag like the real photo -->
+                        <div class="bg-white text-maroon-900 text-xs font-extrabold px-3 py-1 rounded-md shadow inline-block mb-3 float-right">
+                            MO : 99981 84860, 70166 19358
+                        </div>
+                        <div class="clear-both"></div>
+
+                        <!-- Simulated Shop Board Header -->
+                        <div class="bg-maroon-700 border-2 border-gold-300/40 rounded-2xl p-6 text-center relative overflow-hidden">
+                            <h3 class="text-4xl sm:text-5xl font-black signboard-text tracking-wider py-2">
+                                બોમ્બે ફેશન
+                            </h3>
+                            <p class="text-[11px] text-gold-200/90 font-mono mt-1">
+                                GSTIN : 24AXQPP1680E1ZB
+                            </p>
+                            
+                            <!-- Festive Marigold Garland SVG Representation -->
+                            <div class="flex justify-center gap-2 mt-4">
+                                <span class="px-3 py-1 bg-orange-500 text-yellow-200 rounded-full text-xs font-bold shadow">🌼 શુભ દિવાળી</span>
+                                <span class="px-3 py-1 bg-yellow-500 text-maroon-900 rounded-full text-xs font-bold shadow">✨ નવું કલેક્શન</span>
+                                <span class="px-3 py-1 bg-orange-500 text-yellow-200 rounded-full text-xs font-bold shadow">🌼 ૧૦૦% ટ્રસ્ટેડ</span>
+                            </div>
+                        </div>
+
+                        <!-- Storefront Visual Showcase -->
+                        <div class="mt-4 grid grid-cols-3 gap-2.5">
+                            <div class="bg-maroon-900/80 p-3 rounded-xl text-center border border-gold-500/20">
+                                <i class="fa-solid fa-shirt text-3xl text-gold-400 mb-2"></i>
+                                <p class="text-xs font-bold text-gold-200">ઇમ્પોર્ટેડ શર્ટ્સ</p>
+                            </div>
+                            <div class="bg-maroon-900/80 p-3 rounded-xl text-center border border-gold-500/20">
+                                <i class="fa-solid fa-user-tie text-3xl text-gold-400 mb-2"></i>
+                                <p class="text-xs font-bold text-gold-200">પાર્ટીવેર લુક</p>
+                            </div>
+                            <div class="bg-maroon-900/80 p-3 rounded-xl text-center border border-gold-500/20">
+                                <i class="fa-solid fa-medal text-3xl text-gold-400 mb-2"></i>
+                                <p class="text-xs font-bold text-gold-200">કલર ગેરંટી</p>
+                            </div>
+                        </div>
+
+                        <!-- Location Footer inside Card -->
+                        <div class="mt-4 bg-gold-300 text-maroon-900 p-3.5 rounded-xl text-center font-bold text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-location-dot text-maroon-700 text-lg"></i>
+                            <span>09, દુર્ગા કોમ્પ્લેક્સ, અશરફ નગર, હિંમતનગર</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SLOGAN STRIP -->
+    <div class="bg-gold-300 text-maroon-900 py-4 px-4 border-y-2 border-maroon-700 shadow-inner">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-around gap-3 text-center font-extrabold text-base sm:text-lg">
+            <div>🌟 "એકવાર પહેરશો તો વારંવાર બોમ્બે ફેશનમાં જ આવશો!"</div>
+            <div class="hidden md:block text-maroon-700">|</div>
+            <div>💎 "બોમ્બેનો અસલી ઇમ્પોર્ટેડ માલ - કલર અને કાપડની પાક્કી ગેરંટી!"</div>
+        </div>
+    </div>
+
+    <!-- WHY CHOOSE US (અમારી ખાસિયત) -->
+    <section id="speciality" class="py-16 md:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="bg-maroon-100 text-maroon-700 px-4 py-1.5 rounded-full text-sm font-extrabold uppercase tracking-wider">
+                Why Choose Bombay Fashion?
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-maroon-900 mt-3">
+                બોમ્બે ફેશનના કપડાં કેમ સૌથી બેસ્ટ છે?
+            </h2>
+            <p class="text-stone-600 mt-3 text-lg">
+                અમે ક્વોલિટીમાં ક્યારેય બાંધછોડ કરતા નથી, એટલે જ હિંમતનગરના ગ્રાહકોનો અમારા પર અતૂટ વિશ્વાસ છે.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Feature 1 -->
+            <div class="bg-white p-7 rounded-3xl shadow-lg border-b-4 border-maroon-700 hover:-translate-y-1.5 transition duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-maroon-700 text-gold-300 flex items-center justify-center text-2xl mb-5 shadow-md">
+                    <i class="fa-solid fa-plane-arrival"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-maroon-900 mb-2">સીધો બોમ્બે અને ઇમ્પોર્ટેડ માલ</h3>
+                <p class="text-stone-600 leading-relaxed">
+                    અમારે ત્યાં બધો જ માલ સીધો મુંબઈ (Bombay) થી અને પ્રીમિયમ ઇમ્પોર્ટેડ ક્વોલિટીનો જ આવે છે, જેથી તમને લેટેસ્ટ ટ્રેન્ડ મળી રહે.
+                </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-white p-7 rounded-3xl shadow-lg border-b-4 border-amber-500 hover:-translate-y-1.5 transition duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-amber-500 text-maroon-900 flex items-center justify-center text-2xl mb-5 shadow-md">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-maroon-900 mb-2">કલર નહીં જાય તેની ગેરંટી</h3>
+                <p class="text-stone-600 leading-relaxed">
+                    એકવાર પહેરશો કે વારંવાર ધોશો તો પણ કપડાંનો કલર ઝાંખો નહીં પડે. ૧૦૦% ટ્રસ્ટેડ અને ટકાઉ કાપડનો ભરોસો.
+                </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-white p-7 rounded-3xl shadow-lg border-b-4 border-maroon-700 hover:-translate-y-1.5 transition duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-maroon-700 text-gold-300 flex items-center justify-center text-2xl mb-5 shadow-md">
+                    <i class="fa-solid fa-face-smile-beam"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-maroon-900 mb-2">પહેરવાની જબરદસ્ત મજા</h3>
+                <p class="text-stone-600 leading-relaxed">
+                    સ્કિન-ફ્રેન્ડલી કાપડ અને પરફેક્ટ બ્રાન્ડેડ ફિટિંગ, જે પહેર્યા પછી તમને રોયલ લુક અને પૂરો આરામ આપશે.
+                </p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="bg-white p-7 rounded-3xl shadow-lg border-b-4 border-amber-500 hover:-translate-y-1.5 transition duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-amber-500 text-maroon-900 flex items-center justify-center text-2xl mb-5 shadow-md">
+                    <i class="fa-solid fa-handshake-simple"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-maroon-900 mb-2">ફર્સ્ટ ક્લાસ રિસ્પોન્સ</h3>
+                <p class="text-stone-600 leading-relaxed">
+                    દરેક ગ્રાહકને પ્રેમપૂર્વક આવકાર, સાચી સલાહ અને વ્યાજબી ભાવે શ્રેષ્ઠ કપડાં આપવા એ જ અમારો નિયમ છે.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIWALI MEGA OFFER BANNER SECTION -->
+    <section id="diwali-offer" class="py-12 px-4">
+        <div class="max-w-7xl mx-auto bg-gradient-to-r from-maroon-900 via-maroon-700 to-maroon-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl border-2 border-gold-400 relative overflow-hidden">
+            <!-- Decorative Circles -->
+            <div class="absolute -top-16 -right-16 w-56 h-56 bg-gold-400/15 rounded-full blur-2xl"></div>
+            <div class="absolute -bottom-16 -left-16 w-56 h-56 bg-amber-500/15 rounded-full blur-2xl"></div>
+
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-8 space-y-4 text-center lg:text-left">
+                    <div class="inline-block bg-yellow-400 text-maroon-900 font-black px-4 py-1 rounded-full text-sm uppercase tracking-wider">
+                        🪔 દિવાળી સ્પેશિયલ ધમાકા ઓફર 🪔
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-black text-gold-300 leading-tight">
+                        આ દિવાળીએ નવા કપડાંની ખરીદી કરો બોમ્બે ફેશનથી!
+                    </h2>
+                    <p class="text-lg text-stone-200 leading-relaxed">
+                        દિવાળી અને નવા વર્ષ માટે અમારે ત્યાં મુંબઈથી સ્પેશિયલ ફેસ્ટિવ સ્ટોક આવી ગયો છે! શર્ટ, જીન્સ, ટી-શર્ટ અને પાર્ટીવેર કલેક્શન પર આકર્ષક દિવાળી ઓફરનો લાભ લેવાનું ચૂકશો નહીં.
+                    </p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2 text-sm font-bold text-gold-200">
+                        <span class="bg-maroon-800 px-4 py-2 rounded-xl border border-gold-400/40">✅ નવી ડિઝાઇન રોજ હાજર</span>
+                        <span class="bg-maroon-800 px-4 py-2 rounded-xl border border-gold-400/40">✅ કોમ્બો ખરીદી પર ખાસ ફાયદો</span>
+                        <span class="bg-maroon-800 px-4 py-2 rounded-xl border border-gold-400/40">✅ બધી જ સાઈઝ ઉપલબ્ધ</span>
+                    </div>
+                </div>
+                <div class="lg:col-span-4 text-center">
+                    <div class="bg-white/10 backdrop-blur-md border border-gold-300/40 p-6 rounded-2xl">
+                        <p class="text-gold-300 font-bold text-lg mb-2">દિવાળી ઓફર જાણવા માટે</p>
+                        <p class="text-3xl font-black text-white mb-5">અત્યારે જ મેસેજ કરો!</p>
+                        <a href="https://wa.me/917016619358?text=%E0%AA%B9%E0%87%E0%AA%B2%E0%8B%20%E0%AA%AC%E0%8B%E0%AA%AE%E0%8D%E0%AA%AC%E0%87%20%E0%AA%AB%E0%87%E0%AA%B6%E0%AA%A8!%20%E0%AA%AE%E0%AA%A8%E0%87%20%E0%AA%A6%E0%AA%BF%E0%AA%B5%E0%AA%BE%E0%AA%B3%E0%80%E0%AA%A8%E0%80%20%E0%AA%93%E0%AA%AB%E0%AA%B0%20%E0%AA%85%E0%AA%A8%E0%87%20%E0%AA%A8%E0%AA%B5%E0%AA%BE%20%E0%AA%95%E0%AA%AA%E0%AA%A1%E0%AA%BE%E0%AA%82%20%E0%AA%B5%E0%AA%BF%E0%AA%B6%E0%87%20%E0%AA%AE%E0%AA%BE%E0%AA%B9%E0%AA%BF%E0%AA%A4%E0%80%20%E0%AA%86%E0%AA%AA%E0%8B." target="_blank" class="w-full bg-gold-400 hover:bg-gold-300 text-maroon-900 font-black py-4 px-6 rounded-xl shadow-lg inline-flex items-center justify-center gap-2 text-lg transition">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>દિવાળી ઓફર પૂછો</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT VARIETIES / COLLECTION SECTION -->
+    <section id="collection" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="bg-maroon-100 text-maroon-700 px-4 py-1.5 rounded-full text-sm font-extrabold uppercase">
+                Latest Bombay Varieties
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-maroon-900 mt-3">
+                અમારું નવું અને ટ્રેન્ડી કલેક્શન
+            </h2>
+            <p class="text-stone-600 mt-2 text-lg">
+                તમને ગમતી વેરાયટી પસંદ કરો અને સીધા WhatsApp પર તેના ફોટા અથવા પ્રાઇસ મંગાવો!
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Category 1: Imported & Printed Shirts -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-stone-200 flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-64 overflow-hidden bg-stone-100">
+                        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80" 
+                             onerror="this.src='https://placehold.co/600x400/5c161e/f3d299?text=Bombay+Shirts'"
+                             alt="Imported Shirts" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-maroon-700 text-gold-300 text-xs font-extrabold px-3 py-1.5 rounded-full shadow">
+                            🔥 બોમ્બે સ્પેશિયલ
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-extrabold text-maroon-900">ઇમ્પોર્ટેડ અને પ્રિન્ટેડ શર્ટ્સ</h3>
+                        <p class="text-stone-600 mt-2 text-sm leading-relaxed">
+                            દુકાનના ડિસ્પ્લેમાં જોવા મળતા લેટેસ્ટ ચેક્સ, લાઇનિંગ, પ્લેન અને ફંકી પ્રિન્ટેડ શર્ટ્સ. કલર અને ફિટિંગની ૧૦૦% ગેરંટી.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="inquireProduct('ઇમ્પોર્ટેડ અને પ્રિન્ટેડ શર્ટ્સ (Imported Shirts)')" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-md transition">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>WhatsApp પર ફોટા મંગાવો</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Category 2: Branded Fit Jeans & Trousers -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-stone-200 flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-64 overflow-hidden bg-stone-100">
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=80" 
+                             onerror="this.src='https://placehold.co/600x400/5c161e/f3d299?text=Denim+Jeans'"
+                             alt="Denim Jeans" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-amber-500 text-maroon-900 text-xs font-extrabold px-3 py-1.5 rounded-full shadow">
+                            ⭐ બેસ્ટ સેલર
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-extrabold text-maroon-900">ડેનિમ જીન્સ અને કોટન પેન્ટ</h3>
+                        <p class="text-stone-600 mt-2 text-sm leading-relaxed">
+                            સ્ટ્રેચેબલ અને આરામદાયક એન્કલ ફિટ, રેગ્યુલર ફિટ જીન્સ અને ફોર્મલ/કેઝ્યુઅલ કોટન ટ્રાઉઝર્સની વિશાળ રેન્જ.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="inquireProduct('ડેનિમ જીન્સ અને કોટન પેન્ટ (Jeans & Trousers)')" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-md transition">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>WhatsApp પર ફોટા મંગાવો</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Category 3: Premium T-Shirts & Polos -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-stone-200 flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-64 overflow-hidden bg-stone-100">
+                        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80" 
+                             onerror="this.src='https://placehold.co/600x400/5c161e/f3d299?text=Premium+T-Shirts'"
+                             alt="Premium T-Shirts" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-maroon-700 text-gold-300 text-xs font-extrabold px-3 py-1.5 rounded-full shadow">
+                            ✨ ઇમ્પોર્ટેડ ફેબ્રિક
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-extrabold text-maroon-900">પ્રીમિયમ ટી-શર્ટ્સ અને પોલો</h3>
+                        <p class="text-stone-600 mt-2 text-sm leading-relaxed">
+                            કોલર નેક, રાઉન્ડ નેક, ઓવરસાઈઝ અને ફુલ સ્લીવ ઇમ્પોર્ટેડ ટી-શર્ટ્સ જે પહેરવામાં એકદમ સોફ્ટ અને સ્ટાઇલિશ લાગે.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="inquireProduct('પ્રીમિયમ ટી-શર્ટ્સ અને પોલો (T-Shirts)')" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-md transition">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>WhatsApp પર ફોટા મંગાવો</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Category 4: Diwali Festive & Party Wear -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-stone-200 flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-64 overflow-hidden bg-stone-100">
+                        <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=800&q=80" 
+                             onerror="this.src='https://placehold.co/600x400/5c161e/f3d299?text=Diwali+Party+Wear'"
+                             alt="Party Wear" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-yellow-400 text-maroon-900 text-xs font-extrabold px-3 py-1.5 rounded-full shadow">
+                            🪔 દિવાળી સ્પેશિયલ
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-extrabold text-maroon-900">દિવાળી પાર્ટીવેર કલેક્શન</h3>
+                        <p class="text-stone-600 mt-2 text-sm leading-relaxed">
+                            તહેવાર અને પ્રસંગોમાં ચાર ચાંદ લગાવી દે તેવા ડિઝાઇનર શર્ટ્સ, ફેસ્ટિવ વેર અને હેવી લુક કપડાંની નવી રેન્જ.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="inquireProduct('દિવાળી પાર્ટીવેર કલેક્શન (Diwali Festive Wear)')" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-md transition">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>WhatsApp પર ફોટા મંગાવો</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Category 5: Formal & Office Wear -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-stone-200 flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-64 overflow-hidden bg-stone-100">
+                        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80" 
+                             onerror="this.src='https://placehold.co/600x400/5c161e/f3d299?text=Formal+Collection'"
+                             alt="Formal Wear" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-maroon-700 text-gold-300 text-xs font-extrabold px-3 py-1.5 rounded-full shadow">
+                            👔 જેન્ટલમેન લુક
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-extrabold text-maroon-900">ફોર્મલ શર્ટ અને પેન્ટ જોડી</h3>
+                        <p class="text-stone-600 mt-2 text-sm leading-relaxed">
+                            ઓફિસ કે પ્રસંગ માટે સોબર કલર કોમ્બિનેશન વાળા પ્રીમિયમ ફોર્મલ શર્ટ્સ અને ટ્રાઉઝર્સ.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="inquireProduct('ફોર્મલ શર્ટ અને પેન્ટ (Formal Wear)')" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-md transition">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>WhatsApp પર ફોટા મંગાવો</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Category 6: Track Pants, Cargos & Daily Wear -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-stone-200 flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-64 overflow-hidden bg-stone-100">
+                        <img src="https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=800&q=80" 
+                             onerror="this.src='https://placehold.co/600x400/5c161e/f3d299?text=Cargos+%26+Tracks'"
+                             alt="Cargos and Tracks" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-amber-500 text-maroon-900 text-xs font-extrabold px-3 py-1.5 rounded-full shadow">
+                            ⚡ યુથ ફેવરિટ
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-extrabold text-maroon-900">કાર્ગો, ટ્રેક પેન્ટ અને નાઈટવેર</h3>
+                        <p class="text-stone-600 mt-2 text-sm leading-relaxed">
+                            ઇમ્પોર્ટેડ લાયક્રા ટ્રેક પેન્ટ્સ, સિક્સ-પોકેટ કાર્ગો અને શોર્ટ્સ - રોજબરોજ પહેરવા માટે એકદમ આરામદાયક.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="inquireProduct('કાર્ગો અને ટ્રેક પેન્ટ (Cargos & Track Pants)')" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-md transition">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>WhatsApp પર ફોટા મંગાવો</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DIRECT WHATSAPP CUSTOM INQUIRY SECTION -->
+    <section class="py-14 bg-maroon-50 border-y border-maroon-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-2xl p-6 sm:p-10 border-2 border-maroon-700/20">
+                <div class="text-center mb-8">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 text-3xl mb-3">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-black text-maroon-900">
+                        ડાયરેક્ટ WhatsApp ઇન્ક્વાયરી મોકલો
+                    </h2>
+                    <p class="text-stone-600 mt-1">
+                        તમારી પસંદગી અને સાઈઝ જણાવો, અમે તમને તરત જ WhatsApp પર લેટેસ્ટ વેરાયટીની માહિતી મોકલીશું!
+                    </p>
+                </div>
+
+                <form id="whatsappForm" onsubmit="sendCustomWhatsApp(event)" class="space-y-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-sm font-bold text-maroon-900 mb-1.5">તમારું નામ *</label>
+                            <input type="text" id="custName" required placeholder="દા.ત. રાહુલભાઈ પટેલ" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-maroon-700 focus:ring-2 focus:ring-maroon-700/20 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-maroon-900 mb-1.5">કયા કપડાં જોવા છે? *</label>
+                            <select id="custCategory" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-maroon-700 focus:ring-2 focus:ring-maroon-700/20 outline-none bg-white">
+                                <option value="દિવાળીનું સંપૂર્ણ નવું કલેક્શન">🪔 દિવાળીનું સંપૂર્ણ નવું કલેક્શન</option>
+                                <option value="ઇમ્પોર્ટેડ શર્ટ્સ (Imported Shirts)">👔 ઇમ્પોર્ટેડ શર્ટ્સ (Imported Shirts)</option>
+                                <option value="બ્રાન્ડેડ જીન્સ અને ટ્રાઉઝર">👖 બ્રાન્ડેડ જીન્સ અને ટ્રાઉઝર</option>
+                                <option value="પ્રીમિયમ ટી-શર્ટ્સ (T-Shirts)">👕 પ્રીમિયમ ટી-શર્ટ્સ (T-Shirts)</option>
+                                <option value="પાર્ટીવેર અને ફેસ્ટિવ જોડી">✨ પાર્ટીવેર અને ફેસ્ટિવ જોડી</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-sm font-bold text-maroon-900 mb-1.5">તમારી સાઈઝ (Size)</label>
+                            <select id="custSize" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-maroon-700 focus:ring-2 focus:ring-maroon-700/20 outline-none bg-white">
+                                <option value="બધી સાઈઝ ચાલશે / દુકાને આવીને જોઈશું">દુકાને આવીને જોઈશું</option>
+                                <option value="M / 30-32">M (Medium) / કમર 30-32</option>
+                                <option value="L / 32-34">L (Large) / કમર 32-34</option>
+                                <option value="XL / 34-36">XL (Extra Large) / કમર 34-36</option>
+                                <option value="XXL / 38+">XXL / મોટી સાઈઝ</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-maroon-900 mb-1.5">કયા નંબર પર WhatsApp કરવો છે?</label>
+                            <select id="shopNumber" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-maroon-700 focus:ring-2 focus:ring-maroon-700/20 outline-none bg-white">
+                                <option value="917016619358">📱 +91 70166 19358 (મુખ્ય નંબર)</option>
+                                <option value="919998184860">📱 +91 99981 84860 (બીજો નંબર)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-maroon-900 mb-1.5">કોઈ ખાસ મેસેજ (Optional)</label>
+                        <input type="text" id="custNote" placeholder="દા.ત. મારે દિવાળી માટે 3 જોડી કપડાં લેવા છે..." class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-maroon-700 focus:ring-2 focus:ring-maroon-700/20 outline-none">
+                    </div>
+
+                    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-black text-lg py-4 rounded-2xl shadow-xl flex items-center justify-center gap-3 transition transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>ડાયરેક્ટ WhatsApp પર મેસેજ મોકલો</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & STORE LOCATION SECTION -->
+    <section id="contact" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="bg-maroon-100 text-maroon-700 px-4 py-1.5 rounded-full text-sm font-extrabold uppercase">
+                Visit Our Store in Himatnagar
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-maroon-900 mt-3">
+                આજે જ બોમ્બે ફેશનની મુલાકાત લો!
+            </h2>
+            <p class="text-stone-600 mt-2 text-lg">
+                એકવાર રૂબરૂ પધારો અને અમારા ઇમ્પોર્ટેડ કાપડની ક્વોલિટી જાતે અનુભવો.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            <!-- Address & Phone Details Card -->
+            <div class="lg:col-span-7 bg-maroon-800 text-white rounded-3xl p-8 sm:p-10 shadow-2xl border-2 border-gold-400/50 flex flex-col justify-between">
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between border-b border-gold-400/30 pb-5">
+                        <div>
+                            <h3 class="text-3xl font-black signboard-text">બોમ્બે ફેશન</h3>
+                            <p class="text-gold-200 text-sm mt-1">Bombay Fashion - Men's Clothing Store</p>
+                        </div>
+                        <div class="bg-gold-400 text-maroon-900 px-3.5 py-1.5 rounded-xl font-black text-sm flex items-center gap-1">
+                            <span>4.1</span> <i class="fa-solid fa-star text-xs"></i>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-gold-400/20 border border-gold-400 text-gold-300 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <p class="text-gold-300 font-bold text-sm uppercase">દુકાનનું સરનામું (Address):</p>
+                            <p class="text-lg font-bold mt-1">
+                                09, દુર્ગા કોમ્પ્લેક્સ, અશરફ નગર, હિંમતનગર, ગુજરાત - 383001
+                            </p>
+                            <p class="text-sm text-stone-300 mt-0.5">
+                                09, Durga Complex, Ashraf Nagar, Himatnagar, Gujarat 383001
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Numbers -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-gold-400/20 border border-gold-400 text-gold-300 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="text-gold-300 font-bold text-sm uppercase">મોબાઈલ અને WhatsApp નંબર:</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2">
+                                <a href="tel:+917016619358" class="bg-maroon-900 hover:bg-black/40 border border-gold-400/40 p-3 rounded-xl flex items-center justify-between transition">
+                                    <span class="font-extrabold text-lg text-gold-200">+91 70166 19358</span>
+                                    <span class="bg-gold-400 text-maroon-900 text-xs font-bold px-2.5 py-1 rounded-lg">Call</span>
+                                </a>
+                                <a href="tel:+919998184860" class="bg-maroon-900 hover:bg-black/40 border border-gold-400/40 p-3 rounded-xl flex items-center justify-between transition">
+                                    <span class="font-extrabold text-lg text-gold-200">+91 99981 84860</span>
+                                    <span class="bg-gold-400 text-maroon-900 text-xs font-bold px-2.5 py-1 rounded-lg">Call</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timings & GST -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="bg-maroon-900/60 p-4 rounded-2xl border border-gold-500/20">
+                            <p class="text-xs text-gold-300 font-bold uppercase">દુકાન ખુલવાનો સમય:</p>
+                            <p class="font-bold text-base mt-1">🕘 સવારે 9:30 થી રાત્રે 9:30 સુધી</p>
+                            <p class="text-xs text-green-400 mt-0.5">(દિવાળી નિમિત્તે રવિવારે પણ ખુલ્લું)</p>
+                        </div>
+                        <div class="bg-maroon-900/60 p-4 rounded-2xl border border-gold-500/20">
+                            <p class="text-xs text-gold-300 font-bold uppercase">રજીસ્ટર્ડ GST નંબર:</p>
+                            <p class="font-mono font-bold text-base mt-1 text-gold-200">24AXQPP1680E1ZB</p>
+                            <p class="text-xs text-stone-300 mt-0.5">100% Genuine & Trusted Store</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Direction & Share Buttons -->
+                <div class="mt-8 pt-6 border-t border-gold-400/30 flex flex-col sm:flex-row gap-4">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Bombay+Fashion+09+Durga+complex+Ashraf+Nagar+Himatnagar+Gujarat+383001" target="_blank" class="flex-1 bg-gold-400 hover:bg-gold-300 text-maroon-900 font-black py-3.5 px-5 rounded-xl text-center flex items-center justify-center gap-2 shadow-lg transition">
+                        <i class="fa-solid fa-diamond-turn-right text-lg"></i>
+                        <span>Google Map પર રસ્તો જુઓ</span>
+                    </a>
+                    <button onclick="copyShopAddress()" class="bg-maroon-700 hover:bg-maroon-900 text-gold-200 border border-gold-400/50 font-bold py-3.5 px-5 rounded-xl flex items-center justify-center gap-2 transition">
+                        <i class="fa-regular fa-copy"></i>
+                        <span id="copyBtnText">સરનામું કોપી કરો</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Column: Interactive Map Card & Storefront Preview -->
+            <div class="lg:col-span-5 flex flex-col justify-between bg-white rounded-3xl shadow-xl border border-stone-200 overflow-hidden">
+                <div class="p-6 bg-gradient-to-r from-amber-50 to-orange-50 border-b border-stone-200">
+                    <h4 class="text-xl font-black text-maroon-900 flex items-center gap-2">
+                        <i class="fa-solid fa-map-location-dot text-maroon-700"></i>
+                        હિંમતનગર લોકેશન મેપ
+                    </h4>
+                    <p class="text-sm text-stone-600 mt-1">
+                        દુર્ગા કોમ્પ્લેક્સ, અશરફ નગર, હિંમતનગર (ગુજરાત)
+                    </p>
+                </div>
+
+                <!-- Embedded Google Map for Himatnagar Location -->
+                <div class="w-full h-72 sm:h-80 bg-stone-200 relative">
+                    <iframe 
+                        title="Bombay Fashion Himatnagar Map"
+                        src="https://www.google.com/maps?q=Durga+Complex,+Ashraf+Nagar,+Himatnagar,+Gujarat+383001&output=embed" 
+                        class="w-full h-full border-0" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <div class="p-6 bg-white">
+                    <p class="text-sm font-bold text-maroon-800 text-center mb-4">
+                        "આવો, કોન્ટેક્ટ કરો અને ચોક્કસથી વિઝિટ કરો બોમ્બે ફેશન!"
+                    </p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="https://wa.me/917016619358?text=%E0%AA%A8%E0%AA%AE%E0%AA%B8%E0%8D%E0%AA%A4%E0%87%20%E0%AA%AC%E0%8B%E0%AA%AE%E0%8D%E0%AA%AC%E0%87%20%E0%AA%AB%E0%87%E0%AA%B6%E0%AA%A8!%20%E0%AA%AE%E0%AA%A8%E0%87%20%E0%AA%A6%E0%AA%AC%E0%AA%95%E0%AA%BE%E0%AA%A8%E0%AA%A8%E0%AA%BE%20%E0%AA%B2%E0%8B%E0%AA%95%E0%87%E0%AA%B6%E0%AA%A8%20%E0%AA%AA%E0%AA%BF%E0%AA%A8%20%E0%AA%AE%E0%8B%E0%AA%95%E0%AA%B2%E0%8B." target="_blank" class="bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp લોકેશન
+                        </a>
+                        <a href="tel:+919998184860" class="bg-maroon-700 hover:bg-maroon-800 text-gold-300 py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow">
+                            <i class="fa-solid fa-phone"></i> 99981 84860
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-maroon-900 text-gold-200 border-t-4 border-gold-500">
+        <div class="toran-border w-full"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-3xl font-black signboard-text">બોમ્બે ફેશન</h3>
+                    <p class="text-sm text-stone-300 mt-2 leading-relaxed">
+                        હિંમતનગરમાં સીધો બોમ્બેથી આવતો ઇમ્પોર્ટેડ અને ગેરંટીવાળો જેન્ટ્સ કપડાંનો ખજાનો. એકવાર પહેરશો તો કલર નહીં જાય અને પહેરવાની મજા આવશે!
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-extrabold text-gold-400 mb-3">ઝડપી લિંક્સ</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-white transition">હોમ પેજ</a></li>
+                        <li><a href="#speciality" class="hover:text-white transition">અમારી ખાસિયત</a></li>
+                        <li><a href="#collection" class="hover:text-white transition">નવું કલેક્શન</a></li>
+                        <li><a href="#diwali-offer" class="hover:text-white transition">દિવાળી સ્પેશિયલ ઓફર</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-extrabold text-gold-400 mb-3">સંપર્ક વિગત</h4>
+                    <p class="text-sm">📍 09, દુર્ગા કોમ્પ્લેક્સ, અશરફ નગર, હિંમતનગર - 383001</p>
+                    <p class="text-sm mt-1">📞 Mo: +91 70166 19358, +91 99981 84860</p>
+                    <p class="text-xs font-mono text-gold-300/80 mt-2">GSTIN: 24AXQPP1680E1ZB</p>
+                </div>
+            </div>
+            <div class="border-t border-gold-500/20 mt-8 pt-6 text-center text-xs text-stone-400">
+                © 2026 બોમ્બે ફેશન (Bombay Fashion - Himatnagar). સર્વાધિકાર સુરક્ષિત. | શુભ દિવાળી અને નૂતન વર્ષાભિનંદન 🪔
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/917016619358?text=%E0%AA%A8%E0%AA%AE%E0%AA%B8%E0%8D%E0%AA%A4%E0%87%20%E0%AA%AC%E0%8B%E0%AA%AE%E0%8D%E0%AA%AC%E0%87%20%E0%AA%AB%E0%87%E0%AA%B6%E0%AA%A8!%20%E0%AA%AE%E0%AA%BE%E0%AA%B0%E0%87%20%E0%AA%A8%E0%AA%B5%E0%AA%BE%20%E0%AA%95%E0%AA%AA%E0%AA%A1%E0%AA%BE%E0%AA%82%E0%AA%A8%E0%80%20%E0%AA%AE%E0%AA%BE%E0%AA%B9%E0%AA%BF%E0%AA%A4%E0%80%20%E0%AA%9C%E0%8B%E0%AA%88%E0%AA%8F%20%E0%AA%9B%E0%87." 
+       target="_blank" 
+       aria-label="Chat on WhatsApp"
+       class="fixed bottom-5 right-5 z-50 bg-green-600 hover:bg-green-500 text-white px-5 py-3.5 rounded-full shadow-2xl flex items-center gap-2.5 font-extrabold transition transform hover:scale-110 border-2 border-white">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="hidden sm:inline">WhatsApp ચેટ</span>
+    </a>
+
+    <!-- Toast Notification Box -->
+    <div id="toastMsg" class="fixed bottom-20 left-1/2 -translate-x-1/2 bg-maroon-900 text-gold-300 border border-gold-400 px-6 py-3 rounded-2xl shadow-2xl font-bold text-sm hidden z-50">
+        સરનામું કોપી થઈ ગયું છે!
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Toggle Mobile Menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Direct Product Inquiry via WhatsApp
+        function inquireProduct(categoryName) {
+            const phone = "917016619358";
+            const message = `નમસ્તે બોમ્બે ફેશન (હિંમતનગર)! 👋\n\nમને તમારી વેબસાઇટ પરથી *${categoryName}* ખૂબ ગમ્યા છે. તેના નવા ફોટા, પ્રાઇસ અને દિવાળી ઓફર મોકલશો જી.`;
+            const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Custom WhatsApp Inquiry Form Handler
+        function sendCustomWhatsApp(event) {
+            event.preventDefault();
+            const name = document.getElementById('custName').value.trim();
+            const category = document.getElementById('custCategory').value;
+            const size = document.getElementById('custSize').value;
+            const phone = document.getElementById('shopNumber').value;
+            const note = document.getElementById('custNote').value.trim();
+
+            let text = `નમસ્તે બોમ્બે ફેશન (હિંમતનગર)! 🪔\n\n*મારું નામ:* ${name}\n*પસંદગી:* ${category}\n*સાઈઝ:* ${size}`;
+            if (note) {
+                text += `\n*મેસેજ:* ${note}`;
+            }
+            text += `\n\nકૃપા કરીને મને નવી વેરાયટી અને દિવાળી ઓફરની વિગત જણાવશો.`;
+
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+        }
+
+        // Copy Store Address Helper
+        function copyShopAddress() {
+            const addressText = "Bombay Fashion (બોમ્બે ફેશન), 09, Durga Complex, Ashraf Nagar, Himatnagar, Gujarat 383001. Mo: 7016619358, 9998184860";
+            const tempInput = document.createElement("textarea");
+            tempInput.value = addressText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            const btnText = document.getElementById('copyBtnText');
+            const toast = document.getElementById('toastMsg');
+            btnText.innerText = "કોપી થઈ ગયું! ✓";
+            toast.classList.remove('hidden');
+
+            setTimeout(() => {
+                btnText.innerText = "સરનામું કોપી કરો";
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
